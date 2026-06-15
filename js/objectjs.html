@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in js
+
+    </title>
+</head>
+<body><script>
+
+    //obejt-it if te collection(pairs) of keys(proprty) and its value.
+ 
+     //create object-literal {} and nw keywords.
+
+    // create object for student-
+    let student ={ 
+        id:106,
+        name:"lucky",
+        age:21,
+        isMarried:false,
+        adress:{
+            streetNo:7,
+            area:"crossing republic",
+            city:"gaziyabad",
+        },
+        education:["B.tech"," AIML",3,2025-26
+        ],
+        getInfo:function(){
+            return"Mydetails aare"+student.id + "and"+student.name;
+        },
+
+      examDone:null
+
+    };
+    //console.log(student);
+
+    console.log(student);
+    console.log(typeof student ) ;
+    
+    //acess abject prototypes
+    console.log(student.adress);
+    
+    //finding objests keys in object
+    console.log('id'in student);
+    
+    //delete object's key from abject
+    console.log(delete student.name);
+    console.log(student) ;
+    
+    //object length
+    let studentkeys=Object.keys(student);
+    console.log(studentkeys.length);
+    
+    //iterrate kesys of object
+    
+    //using for....loop
+    for(let i=0;i<studentkeys.length;i++){
+
+        console.log(student[studentkeys[i]]);
+    }
+
+    //for in loop.
+
+    for (let x in student){
+        console.log(student);
+    }
+
+    //create an object using new keyword
+
+    
+    let myInfo=new Object();
+    myInfo.name="aditya";
+    myInfo.age = 20;
+    myInfo.city="noida";
+    myInfo.isMarried=true;
+    console.log(myInfo.name);
+    
+    //acess abject's  property 
+
+
+</script>
+    
+</body>
+</html>

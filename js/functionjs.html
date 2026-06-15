@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+ //A function in JavaScript is a reusable block of code designed to perform a specific task. Functions can take inputs, process them, and return a result.
+
+
+
+ // normal function
+    //without parameter.
+    function demo(){
+        console.log("hello JS");
+    }
+    demo();//fuct calling
+
+
+///with parameters 
+ function demo1 (text){
+    console.log("hello"+"text")
+ }   
+  demo1("react");
+
+  //with default parameter
+
+  function cal(a,b=7){
+    console.log("addition of two num is"+(a+b));
+
+
+  }
+
+cal(15);
+
+
+  demo1("react");
+  cal(12);
+  demo();
+
+  // anonymous func in JS is a function tht does not have any name or identifier.
+
+     let msg=function(){
+
+        console.log("hello advance Js");
+     };
+
+     msg();
+
+     //shore code for above func i.e.arrow funct
+
+     let msg1=()=>console.log("hello funct as an arrow");
+
+     msg1();
+     //arrow funct using multuilines.
+
+     let add=(a,b)=>{
+      console.log("first numb is "+a);
+      console.log("second nub is "+b);
+      console.log("sddition of two nunbers is " +(a+b));
+     }
+
+     add(4,5);
+
+     //IFE FUNCTION :- An IIFE (Immediately Invoked Function Expression) in JavaScript is a function that is defined and executed immediately after its creation .
+       //It’s often used to create a private scope and avoid polluting the global namespace.
+      // it runs as soon as it defined.
+
+      (function(){
+      console.log("iife on JS");
+    })();
+      
+      // IIfe using as arrow
+
+      (()=>console.log("iife using arrow"))();
+
+      //callback function:- callback function is a function that is passed as an argument to another function and is executed later, usually after some operation is completed.
+
+       function mul(callback){
+        var num1=10;
+        console.log("first vale is " + num1);
+        var num2=20;
+        console.log("second vale is " +num2);
+        var res=num1*num2;
+        callback (res);          
+       }
+
+       function result(res){
+        console.log ("multiple is "+ res);
+       }
+       mul(result);
+
+       // callback function i=using setTimeout API
+
+       function msg2(){
+        console.log("hello call back");
+        document.writeln("hello");
+       }
+        
+       function loading(){
+        document.writeln("loading .......")
+       };
+
+       setTimeout(msg2,3000);
+       loading();
+
+       //map filter and reduce In JavaScript, the map() function is an Array method that creates a new array by applying a callback function to each element of the original array.
+        //It does not modify the original array
+
+       let num =[1,4,6,2,5,7];
+       let finalResult=num.map(n=>n*2);
+        console.log(finalResult);
+
+        //filter 
+        let finalResult1=num.filter((total,n) =>total+n);
+        console.log(finalResult1);
+
+
+        //reduce
+        let finalResult2=num.reduce((total,n) =>total+n);
+        console.log(finalResult2);
+
+        //rejected 
+
+         let promise=new Promise(function(resolve,reject){
+
+            let age =25;
+            if(age>=18)
+         });
+          promise.then(result=>console.log(result)).
+          catch(console.error=>console.log(error)
+          );
+
+
+</script>
+    
+</body>
+</html>
